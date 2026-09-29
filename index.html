@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, My Love 💕 · Home</title>
+  <meta name="description" content="A love letter to the woman who makes every meal magical.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-heart">❤</span> For Her
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="gallery.html">Food Gallery</a></li>
+      <li><a href="memories.html">Our Memories</a></li>
+      <li><a href="#letter">Love Letter</a></li>
+      <li><a href="#timeline">Our Story</a></li>
+    </ul>
+    <button class="nav-music" id="musicToggle" aria-label="Play music" title='Play "Ama Hem Hem"'>
+      <span class="music-icon">♪</span>
+    </button>
+  </nav>
+
+  <div class="now-playing" id="nowPlaying" hidden>
+    <span class="np-heart">♪</span>
+    Now playing: <em>Ama Hem Hem</em> — Thatohatsi &amp; Sjava
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-hello">
+        <span class="hello-line"></span>
+        Hello, my love
+        <span class="hello-line"></span>
+      </p>
+      <h1 class="hero-title">
+        You make life <span class="accent">delicious</span>
+      </h1>
+      <p class="hero-sub">
+        A little corner of the internet dedicated to the amazing woman I adore —
+        and every incredible dish she creates with her hands &amp; her heart.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="gallery.html" class="hero-btn">
+          <span>See your food gallery</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#letter" class="hero-btn hero-btn-ghost">
+          <span>Read my letter</span>
+          <span class="btn-heart">❤</span>
+        </a>
+      </div>
+
+      <div class="daily-note" id="dailyNote">
+        <span class="daily-note-icon">💌</span>
+        <span class="daily-note-text">Loading a little love note for you…</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span></span>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ABOUT / PHOTO -->
+    <section class="section about" id="about">
+      <div class="section-inner about-grid">
+
+        <div class="about-photo-wrap">
+          <div class="photo-frame">
+            <img
+              src="images/love.jpeg"
+              alt="My beautiful girlfriend"
+              class="about-photo"
+              loading="lazy"
+            >
+            <div class="photo-badge">❤️</div>
+          </div>
+          <div class="sticker sticker-1">My favorite chef</div>
+          <div class="sticker sticker-2">made with love</div>
+          <div class="sticker sticker-3">100% real</div>
+        </div>
+
+        <div class="about-text">
+          <span class="section-tag">The girl of my dreams</span>
+          <h2 class="section-title">
+            She's not just beautiful —<br>
+            she's <em>magic</em> in the kitchen.
+          </h2>
+          <p>
+            Every dish she makes turns an ordinary day into a celebration.
+            The smell of her cooking is my favorite thing in the world,
+            and watching her create is a privilege I'll never take for granted.
+          </p>
+          <p>
+            This page is my small way of saying:
+            <strong>thank you for feeding my heart and my soul.</strong>
+          </p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="100">0</span>
+              <span class="stat-label">% love</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="7">0</span>
+              <span class="stat-label">days a week</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="365">0</span>
+              <span class="stat-label">days a year</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="1">0</span>
+              <span class="stat-label">amazing her</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REASONS -->
+    <section class="section reasons" id="reasons">
+      <div class="section-inner">
+        <div class="section-head center">
+          <span class="section-tag">Just a few of many</span>
+          <h2 class="section-title">Reasons I love her</h2>
+          <p class="section-desc">
+            A tiny, incomplete list — because I could never finish it.
+          </p>
+        </div>
+
+        <div class="reason-grid" id="reasonGrid"></div>
+      </div>
+    </section>
+
+    <!-- RECIPE PREVIEW -->
+    <section class="section preview-recipes">
+      <div class="section-inner">
+        <div class="section-head center">
+          <span class="section-tag">A little taste</span>
+          <h2 class="section-title">Some of her signature dishes</h2>
+          <p class="section-desc">
+            Just a preview — head to the gallery to see the full feast.
+          </p>
+        </div>
+
+        <div class="recipe-grid" id="recipePreview">
+
+          <article class="recipe-card">
+            <div class="recipe-photo">
+              <img src="images/food1.jpeg" alt="Roasted sweet potato and grilled chicken">
+            </div>
+            <h3>Sweet Potato &amp; Chicken</h3>
+            <p>Hasselback sweet potato, grilled chicken, fresh salad.</p>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-photo">
+              <img src="images/food3.jpeg" alt="Braai plate with pap, chicken and wors">
+            </div>
+            <h3>Braai Plate</h3>
+            <p>Pap, chicken, wors, chakalaka and coleslaw.</p>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-photo">
+              <img src="images/food7.jpeg" alt="Loaded pizza">
+            </div>
+            <h3>Loaded Pizza</h3>
+            <p>Chicken, mushroom and mountains of melted cheese.</p>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-photo">
+              <img src="images/food11.jpeg" alt="Yoghurt granola fruit bowl">
+            </div>
+            <h3>Granola Bowl</h3>
+            <p>Yoghurt, granola, grapes and apricots.</p>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-photo">
+              <img src="images/food15.jpeg" alt="Steak, mash and tomato salad">
+            </div>
+            <h3>Steak &amp; Mash</h3>
+            <p>Tender steak, creamy mash, fresh tomato salad.</p>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-photo">
+              <img src="images/food18.jpeg" alt="Steak with sweet potato mash and broccoli bake">
+            </div>
+            <h3>Steak &amp; Sweet Potato</h3>
+            <p>With cheesy broccoli bake, corn and salad.</p>
+          </article>
+
+        </div>
+
+        <div class="preview-cta">
+          <a href="gallery.html" class="hero-btn">
+            <span>View full gallery</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section class="section letter-section" id="letter">
+      <div class="section-inner">
+        <div class="letter-wrap">
+          <div class="letter-paper">
+            <div class="letter-top">
+              <span class="letter-seal">❤</span>
+            </div>
+            <p class="letter-date" id="letterDate"></p>
+            <h2 class="letter-title">My dearest love,</h2>
+            <div class="letter-body">
+              <p>
+                I don't know how to put into words what you mean to me, but
+                I'll try, because you deserve to hear it every single day.
+              </p>
+              <p>
+                When you cook, something happens in the room. The air gets warmer,
+                the world gets softer, and I forget whatever was bothering me.
+                It isn't just the food — it's <em>you</em>. It's the way you
+                hum while you stir, the way you taste everything twice
+                (once for flavor, once for luck), and the way you always
+                save me the best bite.
+              </p>
+              <p>
+                You've taught me that love isn't loud. It's quiet. It's a warm plate
+                on a hard day. It's you saying "sit down, I made your favorite"
+                without me ever having to ask.
+              </p>
+              <p>
+                Thank you for every meal. For every laugh. For every time you
+                put your heart on a plate and called it dinner.
+              </p>
+              <p class="letter-signoff">
+                Forever and always yours,
+              </p>
+              <p class="letter-signature">— Me 💕</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section timeline-section" id="timeline">
+      <div class="section-inner">
+        <div class="section-head center">
+          <span class="section-tag">Our little story</span>
+          <h2 class="section-title">Moments I'll never forget</h2>
+        </div>
+
+        <div class="timeline" id="timelineEl"></div>
+      </div>
+    </section>
+
+    <!-- MEMORIES PREVIEW -->
+    <section class="section memories-section" id="memories">
+      <div class="section-inner">
+        <div class="section-head center">
+          <span class="section-tag">Us, together</span>
+          <h2 class="section-title">Memories I <em>treasure</em></h2>
+          <p class="section-desc">
+            Every moment with you becomes a memory I never want to forget.
+          </p>
+        </div>
+
+        <div class="memories-grid">
+
+          <figure class="memory-card reveal">
+            <div class="memory-photo">
+              <img src="images/memory-graduation.jpeg" alt="My graduation day">
+            </div>
+            <figcaption>
+              <span class="memory-date">Milestone</span>
+              <h3>My graduation day 🎓</h3>
+              <p>You were there, beaming at me from the crowd — that made the whole day worth it.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="memory-card reveal">
+            <div class="memory-photo">
+              <img src="images/memory-her-birthday.jpeg" alt="Her birthday">
+            </div>
+            <figcaption>
+              <span class="memory-date">Birthday</span>
+              <h3>Your birthday 🎂</h3>
+              <p>The way your face lit up when you saw the candles — I'd relive that night forever.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="memory-card reveal">
+            <div class="memory-photo">
+              <img src="images/memory-romantic-1.jpeg" alt="A romantic moment">
+            </div>
+            <figcaption>
+              <span class="memory-date">Romantic</span>
+              <h3>Just us 🌹</h3>
+              <p>No big occasion, no reason — just you and me and the way you looked at me.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="memory-card reveal">
+            <div class="memory-photo">
+              <video
+                src="images/memory-walking.mp4"
+                muted
+                loop
+                playsinline
+                autoplay
+                preload="metadata">
+              </video>
+            </div>
+            <figcaption>
+              <span class="memory-date">Video</span>
+              <h3>Walking together 🎥</h3>
+              <p>Our little walk, hand in hand. I could watch this forever.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <div class="preview-cta">
+          <a href="memories.html" class="hero-btn">
+            <span>See all our memories</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE SLIDER -->
+    <section class="section quote-section">
+      <div class="section-inner">
+        <div class="quote-box">
+          <span class="quote-mark">“</span>
+          <p class="quote-text" id="quoteText">Loading…</p>
+          <span class="quote-mark quote-mark-end">”</span>
+          <div class="quote-dots" id="quoteDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="section closing">
+      <div class="section-inner closing-inner">
+        <p class="closing-script">I love you</p>
+        <h2 class="closing-title">More than any words could ever say.</h2>
+        <p class="closing-text">
+          Thank you for every meal, every smile, and every little moment.
+          You are my favorite person and my favorite chef. 💕
+        </p>
+        <a href="gallery.html" class="hero-btn">
+          <span>See her beautiful food</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-main">Made with <span class="footer-heart">♥</span> just for you</p>
+      <p class="footer-small">Forever yours · <span id="footerYear"></span></p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

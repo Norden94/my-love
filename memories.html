@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories 💕 · For You</title>
+  <meta name="description" content="Every moment with you — a scrapbook of our love story.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-heart">❤</span> For Her
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Food Gallery</a></li>
+      <li><a href="memories.html" class="active">Our Memories</a></li>
+      <li><a href="index.html#letter">Love Letter</a></li>
+    </ul>
+    <button class="nav-music" id="musicToggle" aria-label="Play music" title='Play "Ama Hem Hem"'>
+      <span class="music-icon">♪</span>
+    </button>
+  </nav>
+
+  <div class="now-playing" id="nowPlaying" hidden>
+    <span class="np-heart">♪</span>
+    Now playing: <em>Ama Hem Hem</em> — Thatohatsi &amp; Sjava
+  </div>
+
+  <!-- HEADER -->
+  <header class="gallery-header">
+    <div class="hero-inner">
+      <p class="hero-hello">
+        <span class="hello-line"></span>
+        Us, together
+        <span class="hello-line"></span>
+      </p>
+      <h1 class="hero-title">
+        Our <span class="accent">memories</span>
+      </h1>
+      <p class="hero-sub">
+        Every photo, every video, every quiet moment — a scrapbook of us.
+        Click any memory to see it bigger, and press play on the one video
+        that always makes me smile.
+      </p>
+
+      <div class="gallery-filters" id="memoryFilters">
+        <button class="filter-btn active" data-filter="all">All memories</button>
+        <button class="filter-btn" data-filter="milestone">Milestones</button>
+        <button class="filter-btn" data-filter="birthday">Birthdays</button>
+        <button class="filter-btn" data-filter="date">Dates</button>
+        <button class="filter-btn" data-filter="home">At home</button>
+        <button class="filter-btn" data-filter="out">Out &amp; about</button>
+        <button class="filter-btn" data-filter="romantic">Romantic</button>
+        <button class="filter-btn" data-filter="video">Videos</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section gallery-section">
+      <div class="section-inner">
+
+        <div class="gallery-count" id="memoryCount"></div>
+
+        <div class="gallery-grid" id="memoryGrid">
+
+          <figure class="gallery-item" data-category="milestone" data-title="My graduation day">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-graduation.jpeg" alt="My graduation day" loading="lazy">
+              <span class="gallery-tag">Milestone</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>My graduation day</h3>
+              <p>You were there, beaming at me from the crowd — and that made the whole day worth it.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="birthday" data-title="Your birthday">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-her-birthday.jpeg" alt="Her birthday" loading="lazy">
+              <span class="gallery-tag">Birthday</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Your birthday 🎂</h3>
+              <p>The way your face lit up when you saw the candles — I'd relive that night forever.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="birthday" data-title="My birthday">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-my-birthday.jpeg" alt="My birthday" loading="lazy">
+              <span class="gallery-tag">Birthday</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>My birthday 🎈</h3>
+              <p>You made me feel like the most loved person on earth. I still smile thinking about it.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="date" data-title="Our first date">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-date-1.jpeg" alt="Our first date" loading="lazy">
+              <span class="gallery-tag">Date</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Our first date</h3>
+              <p>I was so nervous, and you made me feel like I'd known you forever.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="date" data-title="Our second date">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-date-2.jpeg" alt="Our second date" loading="lazy">
+              <span class="gallery-tag">Date</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Our second date</h3>
+              <p>By then I already knew — you were going to be my favorite person.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="home" data-title="Cooking together">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-cooking.jpeg" alt="Cooking together" loading="lazy">
+              <span class="gallery-tag">At home</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Cooking together</h3>
+              <p>Flour on your nose, laughter in the air — my favorite kind of chaos.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="out" data-title="Going to the stadium">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-stadium.jpeg" alt="Going to the stadium" loading="lazy">
+              <span class="gallery-tag">Out &amp; about</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Going to the stadium 🏟️</h3>
+              <p>The noise, the energy, your hand in mine — I don't even remember who won.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="home" data-title="Eating at home together">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-eating-home.jpeg" alt="Eating at home together" loading="lazy">
+              <span class="gallery-tag">At home</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Eating at home together</h3>
+              <p>Just us, a warm plate, and quiet conversation. The simplest kind of perfect.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="romantic" data-title="Just us">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-romantic-1.jpeg" alt="A romantic moment" loading="lazy">
+              <span class="gallery-tag">Romantic</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Just us 🌹</h3>
+              <p>No big occasion, no reason — just you and me and the way you looked at me.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="romantic" data-title="My favorite view">
+            <div class="gallery-img-wrap">
+              <img src="images/memory-romantic-2.jpeg" alt="Another romantic moment" loading="lazy">
+              <span class="gallery-tag">Romantic</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>My favorite view 💗</h3>
+              <p>I don't need a sunset or a skyline. You are the view.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item gallery-video" data-category="video romantic" data-title="Walking together">
+            <div class="gallery-img-wrap">
+              <video
+                src="images/memory-walking.mp4"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                class="gallery-video-el">
+              </video>
+              <span class="gallery-tag">Video</span>
+              <span class="gallery-zoom">▶</span>
+            </div>
+            <figcaption>
+              <h3>Walking together 🎥</h3>
+              <p>Our little walk, hand in hand. I could watch this forever.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <p class="gallery-empty" id="memoryEmpty" hidden>
+          No memories in this category yet — but I promise there will be. 💕
+        </p>
+
+        <div class="surprise-wrap">
+          <button class="surprise-btn" id="loveButton">
+            <span class="btn-heart">❤️</span>
+            Click for a secret message
+          </button>
+          <p class="secret-message" id="secretMessage"></p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section closing">
+      <div class="section-inner closing-inner">
+        <p class="closing-script">Every moment</p>
+        <h2 class="closing-title">is a memory I'll keep forever.</h2>
+        <p class="closing-text">
+          Thank you for being my favorite person to make memories with.
+        </p>
+        <a href="index.html" class="hero-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span>Back to home</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    <video src="" class="lightbox-video" id="lightboxVideo" controls playsinline hidden></video>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-main">Made with <span class="footer-heart">♥</span> just for you</p>
+      <p class="footer-small">Forever yours · <span id="footerYear"></span></p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
