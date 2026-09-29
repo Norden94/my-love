@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Her Food Gallery 🍽️ · For You</title>
+  <meta name="description" content="A gallery of every beautiful dish she has cooked.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-heart">❤</span> For Her
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Food Gallery</a></li>
+      <li><a href="index.html#letter">Love Letter</a></li>
+    </ul>
+    <button class="nav-music" id="musicToggle" aria-label="Play music" title="Play a soft melody">
+      <span class="music-icon">♪</span>
+    </button>
+  </nav>
+
+  <!-- GALLERY HEADER -->
+  <header class="gallery-header">
+    <div class="hero-inner">
+      <p class="hero-hello">
+        <span class="hello-line"></span>
+        A gallery of love
+        <span class="hello-line"></span>
+      </p>
+      <h1 class="hero-title">
+        Food she <span class="accent">cooked</span>
+      </h1>
+      <p class="hero-sub">
+        Every photo here is a memory — a plate she made with her own hands,
+        just for us. Click any photo to see it bigger and read a little note.
+      </p>
+
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="filter-btn active" data-filter="all">All dishes</button>
+        <button class="filter-btn" data-filter="main">Main dishes</button>
+        <button class="filter-btn" data-filter="grill">Grill &amp; BBQ</button>
+        <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+        <button class="filter-btn" data-filter="healthy">Healthy</button>
+        <button class="filter-btn" data-filter="comfort">Comfort food</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section gallery-section">
+      <div class="section-inner">
+
+        <div class="gallery-count" id="galleryCount"></div>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <figure class="gallery-item" data-category="healthy" data-title="Roasted Sweet Potato & Grilled Chicken">
+            <div class="gallery-img-wrap">
+              <img src="images/food1.jpeg" alt="Roasted sweet potato, grilled chicken and fresh salad" loading="lazy">
+              <span class="gallery-tag">Healthy</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Roasted Sweet Potato &amp; Grilled Chicken</h3>
+              <p>Hasselback sweet potato, juicy grilled chicken and a fresh salad with creamy dressing.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="comfort" data-title="Pap, Beef Stew & Creamed Spinach">
+            <div class="gallery-img-wrap">
+              <img src="images/food2.jpeg" alt="Pap with beef stew, creamed spinach and sweet potato mash" loading="lazy">
+              <span class="gallery-tag">Comfort</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Pap, Beef Stew &amp; Creamed Spinach</h3>
+              <p>Warm pap, rich beef stew, creamed spinach and sweet potato mash. Home on a plate.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="grill" data-title="Braai Plate: Chicken, Wors & Chakalaka">
+            <div class="gallery-img-wrap">
+              <img src="images/food3.jpeg" alt="Pap with grilled chicken, wors, chakalaka and coleslaw" loading="lazy">
+              <span class="gallery-tag">Grill</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Braai Plate: Chicken, Wors &amp; Chakalaka</h3>
+              <p>Pap, grilled chicken, boerewors, chakalaka and creamy coleslaw — a proper feast.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="grill" data-title="Steak, Potato Wedges & Corn">
+            <div class="gallery-img-wrap">
+              <img src="images/food4.jpeg" alt="Steak with potato wedges, corn on the cob and avocado salad" loading="lazy">
+              <span class="gallery-tag">Grill</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Steak, Potato Wedges &amp; Corn</h3>
+              <p>Perfectly grilled steak, crispy potato wedges, sweet corn and creamy avocado salad.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="grill" data-title="Sticky BBQ Ribs & Chips">
+            <div class="gallery-img-wrap">
+              <img src="images/food5.jpeg" alt="Sticky BBQ ribs with chips, corn and salad" loading="lazy">
+              <span class="gallery-tag">Grill</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Sticky BBQ Ribs &amp; Chips</h3>
+              <p>Fall-off-the-bone ribs glazed in BBQ sauce, golden chips, corn and a fresh side salad.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="comfort" data-title="Cheesy Beef Pasta Bake">
+            <div class="gallery-img-wrap">
+              <img src="images/food6.jpeg" alt="Cheesy beef pasta bake with salad" loading="lazy">
+              <span class="gallery-tag">Comfort</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Cheesy Beef Pasta Bake</h3>
+              <p>Pasta baked with rich beef mince, melted golden cheese and a crisp side salad.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="comfort" data-title="Loaded Chicken & Mushroom Pizza">
+            <div class="gallery-img-wrap">
+              <img src="images/food7.jpeg" alt="Loaded chicken and mushroom pizza with cheese" loading="lazy">
+              <span class="gallery-tag">Comfort</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Loaded Chicken &amp; Mushroom Pizza</h3>
+              <p>Freshly baked pizza loaded with chicken, mushroom and an avalanche of cheese.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="healthy" data-title="Grilled Chicken, Corn & Roast Potatoes">
+            <div class="gallery-img-wrap">
+              <img src="images/food8.jpeg" alt="Grilled chicken with corn, roast potatoes and salad" loading="lazy">
+              <span class="gallery-tag">Healthy</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Grilled Chicken, Corn &amp; Roast Potatoes</h3>
+              <p>Herb-grilled chicken, sweetcorn, crispy roast potatoes and a fresh salad with feta.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="main" data-title="Crispy Fried Fish & Chips">
+            <div class="gallery-img-wrap">
+              <img src="images/food9.jpeg" alt="Crispy fried fish with chips and salad" loading="lazy">
+              <span class="gallery-tag">Main</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Crispy Fried Fish &amp; Chips</h3>
+              <p>Golden fried fish, crispy chips and a fresh salad with creamy dressing.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="grill" data-title="Steak, Wedges & Tomato Feta Salad">
+            <div class="gallery-img-wrap">
+              <img src="images/food10.jpeg" alt="Steak with potato wedges and tomato feta salad" loading="lazy">
+              <span class="gallery-tag">Grill</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Steak, Wedges &amp; Tomato Feta Salad</h3>
+              <p>Juicy steak, spiced potato wedges and a bright tomato, cucumber &amp; feta salad.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="healthy" data-title="Yoghurt, Granola & Fruit Bowl">
+            <div class="gallery-img-wrap">
+              <img src="images/food11.jpeg" alt="Yoghurt bowl with granola, grapes, strawberries and apricots" loading="lazy">
+              <span class="gallery-tag">Healthy</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Yoghurt, Granola &amp; Fruit Bowl</h3>
+              <p>Creamy yoghurt, crunchy granola and fresh grapes, strawberries and apricots.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="comfort" data-title="Ribs, Mash, Corn & Veg Pasta Salad">
+            <div class="gallery-img-wrap">
+              <img src="images/food12.jpeg" alt="Ribs with mashed potato, corn and creamy vegetable pasta salad" loading="lazy">
+              <span class="gallery-tag">Comfort</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Ribs, Mash, Corn &amp; Veg Pasta Salad</h3>
+              <p>Sticky ribs, creamy mashed potato, sweetcorn and a loaded veggie pasta salad.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="breakfast" data-title="Loaded Breakfast Omelette">
+            <div class="gallery-img-wrap">
+              <img src="images/food13.jpeg" alt="Breakfast omelette with sausage and potato" loading="lazy">
+              <span class="gallery-tag">Breakfast</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Loaded Breakfast Omelette</h3>
+              <p>A fluffy omelette packed with peppers and mince, served with sausage and potato.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="breakfast" data-title="Morning Granola Bowl">
+            <div class="gallery-img-wrap">
+              <img src="images/food14.jpeg" alt="Yoghurt with granola, banana, apple and strawberries" loading="lazy">
+              <span class="gallery-tag">Breakfast</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Morning Granola Bowl</h3>
+              <p>Yoghurt, granola, banana, apple and strawberries — the sweetest way to start a day.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="main" data-title="Steak, Creamy Mash & Tomato Salad">
+            <div class="gallery-img-wrap">
+              <img src="images/food15.jpeg" alt="Steak with creamy mashed potato and tomato salad" loading="lazy">
+              <span class="gallery-tag">Main</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Steak, Creamy Mash &amp; Tomato Salad</h3>
+              <p>Tender steak, creamy mashed potato and a simple fresh tomato salad.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="main" data-title="Cheesy Chicken Wrap & Chips">
+            <div class="gallery-img-wrap">
+              <img src="images/food16.jpeg" alt="Cheesy chicken wrap with chips" loading="lazy">
+              <span class="gallery-tag">Main</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Cheesy Chicken Wrap &amp; Chips</h3>
+              <p>Soft wrap filled with chicken and melted cheese, served with a pile of golden chips.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="comfort" data-title="Beef Stew, Risotto & Roast Veg">
+            <div class="gallery-img-wrap">
+              <img src="images/food17.jpeg" alt="Beef stew with risotto, roast vegetables and beetroot salad" loading="lazy">
+              <span class="gallery-tag">Comfort</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Beef Stew, Risotto &amp; Roast Veg</h3>
+              <p>Slow-cooked beef stew with chorizo, creamy risotto and roasted beetroot &amp; veg.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="main" data-title="Steak, Sweet Potato Mash & Broccoli Bake">
+            <div class="gallery-img-wrap">
+              <img src="images/food18.jpeg" alt="Steak with sweet potato mash, broccoli cheese bake, corn and salad" loading="lazy">
+              <span class="gallery-tag">Main</span>
+              <span class="gallery-zoom">🔍</span>
+            </div>
+            <figcaption>
+              <h3>Steak, Sweet Potato Mash &amp; Broccoli Bake</h3>
+              <p>Grilled steak over sweet potato mash, with cheesy broccoli bake, corn and salad.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <p class="gallery-empty" id="galleryEmpty" hidden>
+          No dishes in this category yet — but I'm sure she'll make one soon. 💕
+        </p>
+
+        <div class="surprise-wrap">
+          <button class="surprise-btn" id="loveButton">
+            <span class="btn-heart">❤️</span>
+            Click for a secret message
+          </button>
+          <p class="secret-message" id="secretMessage"></p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section closing">
+      <div class="section-inner closing-inner">
+        <p class="closing-script">Every bite</p>
+        <h2 class="closing-title">is a little piece of your love.</h2>
+        <p class="closing-text">
+          Thank you for feeding me — body and soul.
+        </p>
+        <a href="index.html" class="hero-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span>Back to home</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-main">Made with <span class="footer-heart">♥</span> just for you</p>
+      <p class="footer-small">Forever yours · <span id="footerYear"></span></p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
